@@ -24,13 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Send email
     if (mail($to, $subject, $email_content, $headers)) {
         // Redirect back to contact page with success message
-        header("Location: contact.html?status=success#contactForm");
+        header("Location: contact.php?status=success#contactForm");
     } else {
         // Redirect back to contact page with error message
-        header("Location: contact.html?status=error#contactForm");
+        header("Location: contact.php?status=error#contactForm");
     }
 } else {
     // If not a POST request, redirect to the contact page
-    header("Location: contact.html");
+    header("Location: contact.php");
 }
 ?>
