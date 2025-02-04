@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Kavinda Kiridena</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .tech-stack img {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+
+        .certificate-card {
+            transition: transform 0.3s;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Kavinda Kiridana</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">About Me</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Background</h3>
+                    <p class="lead">Software Engineering undergraduate with a passion for backend development and
+                        creating efficient, scalable solutions.</p>
+                    <p>Experienced in various programming languages and frameworks, with a focus on backend technologies
+                        and database management.</p>
+
+                    <h3 class="mt-4">Education</h3>
+                    <div class="mb-3">
+                        <h5>BSc Hons Software Engineering</h5>
+                        <p>University of Plymouth</p>
+                    </div>
+
+                    <h3 class="mt-4">Work Experience</h3>
+                    <div class="mb-3">
+                        <h5>Software Engineering Intern</h5>
+                        <p>SLT Mobitel</p>
+                        <p>Worked on developing and maintaining backend systems using ASP.NET MVC and MySQL.</p>
+                    </div>
+
+                    <a href="path/to/your/cv.pdf" class="btn btn-primary mt-3" download>
+                        <i class="fas fa-download me-2"></i>Download CV
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <h3>Skills & Expertise</h3>
+                    <div class="mb-4">
+                        <h5>Frontend</h5>
+                        <p>HTML5, CSS3, JavaScript, Bootstrap</p>
+
+                        <h5>Backend</h5>
+                        <p>ASP.NET MVC, PHP, Python</p>
+
+                        <h5>Databases</h5>
+                        <p>MySQL, MongoDB</p>
+
+                        <h5>Tools & Others</h5>
+                        <p>Git, VS Code, Visual Studio, Docker</p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h5>Tech Stack</h5>
+                        <!-- Replace with actual tech stack icons -->
+                        <img src="/api/placeholder/50/50" alt="HTML5">
+                        <img src="/api/placeholder/50/50" alt="CSS3">
+                        <img src="/api/placeholder/50/50" alt="JavaScript">
+                        <img src="/api/placeholder/50/50" alt="PHP">
+                        <img src="/api/placeholder/50/50" alt="MySQL">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Certifications & Achievements</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card certificate-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Design & Python for Beginners</h5>
+                            <p class="card-text">University of Moratuwa</p>
+                            <a href="#" class="btn btn-outline-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card certificate-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Financial Accounting</h5>
+                            <p class="card-text">Open University of Sri Lanka</p>
+                            <a href="#" class="btn btn-outline-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card certificate-card">
+                        <div class="card-body">
+                            <h5 class="card-title">English Learning</h5>
+                            <p class="card-text">British Council</p>
+                            <a href="#" class="btn btn-outline-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <h3 class="text-center mb-4">Awards & Competitions</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Douthan 3.0 Builathon</h5>
+                        <p class="card-text">10th Place - IEEE of NSBM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">References</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <h5>Professional Reference</h5>
+                        <p><strong>John Doe</strong></p>
+                        <p>Senior Software Engineer, SLT Mobitel</p>
+                        <p>Email: john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <h5>Academic Reference</h5>
+                        <p><strong>Jane Smith</strong></p>
+                        <p>Professor, University of Plymouth</p>
+                        <p>Email: jane.smith@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
