@@ -80,10 +80,10 @@
                 <div class="col-md-6 mb-4 mb-md-0">
                     <div class="contact-info">
                         <h3 class="mb-4">Contact Information</h3>
-                        <p><i class="fas fa-map-marker-alt me-2"></i> 61B, Dambahena Road, Maharagama, Colombo, Sri
+                        <p><i class="fas fa-map-marker-alt me-2"></i> 61/B Dambahena Road, Maharagama, Colombo, Sri
                             Lanka</p>
                         <p><i class="fas fa-envelope me-2"></i> kavindakiridena@gmail.com</p>
-
+                        <p><i class="fas fa-phone me-2"></i> +94 771923861</p>
                         <h4 class="mt-4 mb-3">Connect with me</h4>
                         <div class="social-links">
                             <a href="https://github.com/KavindaKiridana" target="_blank"><i
@@ -94,20 +94,27 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="contact-form">
+                    <!-- <div class="contact-form"> -->
+                    <div class="contact-info">
                         <h3 class="mb-4">Send me a message</h3>
                         <form action="send_email.php" method="POST" id="contactForm">
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                                <!-- <label for="name" class="form-label">Name</label> -->
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name here.
+
+                                " required>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <!-- <label for="email" class="form-label">Email</label> -->
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email here.
+
+                                    " required>
                             </div>
                             <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                <!-- <label for="message" class="form-label">Message</label> -->
+                                <textarea placeholder="Enter your message here.
+
+                                " class="form-control" id="message" name="message" rows="3" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Send Message</button>
                         </form>
