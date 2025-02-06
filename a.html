@@ -283,13 +283,18 @@
                 <p><i class="fa fa-phone fa-fw w3-medium w3-margin-right"></i>+94 771923861</p>
             </div>
 
-            <form action="mailto:kavindakiridena@gmail.com" method="POST" enctype="text/plain">
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name">
+            <form id="contactForm">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required id="name"
+                        name="name" required>
+                    <input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required id="email"
+                        name="email" required>
+                    <input class="w3-input w3-padding-16 w3-border" type="tel" placeholder="Phone" required id="phone"
+                        name="phone" required>
+                    <input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required
+                        id="subject" name="subject" required>
+                    <textarea class="w3-input w3-padding-16 w3-border" placeholder="Message" required id="message"
+                        name="message" required></textarea>
                 </p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required
-                        name="Email"></p>
-                <p><textarea class="w3-input w3-padding-16 w3-border" placeholder="Message" required
-                        name="Message"></textarea></p>
                 <p>
                     <button class="w3-button w3-light-grey w3-padding-large" type="submit">
                         <i class="fa fa-paper-plane"></i> SEND MESSAGE
@@ -308,6 +313,54 @@
         function closeNav() {
             document.getElementById("mySidebar").style.display = "none";
         }
+    </script>
+    <!--contact form's JavaScript part-->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+
+            fetch('https://formspree.io/f/movjlavy', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Show success message
+                        const successAlert = document.createElement('div');
+                        successAlert.className = 'alert alert-success mt-3';
+                        successAlert.textContent = 'Message sent successfully!';
+                        this.insertAdjacentElement('afterend', successAlert);
+
+                        // Clear form
+                        this.reset();
+
+                        // Remove success message and redirect after 2 seconds
+                        setTimeout(() => {
+                            successAlert.remove();
+                            window.location.href = window.location.href;
+                        }, 2000);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    const errorAlert = document.createElement('div');
+                    errorAlert.className = 'alert alert-danger mt-3';
+                    errorAlert.textContent = 'There was an error sending your message. Please try again.';
+                    this.insertAdjacentElement('afterend', errorAlert);
+
+                    // Remove error message after 3 seconds
+                    setTimeout(() => errorAlert.remove(), 3000);
+                });
+        });
     </script>
 </body>
 
