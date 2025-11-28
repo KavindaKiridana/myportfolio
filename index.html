@@ -649,7 +649,7 @@
           })
             .then((response) => {
               if (response.ok) {
-                // Show success message
+                // success message
                 const successAlert = document.createElement("div");
                 successAlert.className = "alert alert-success mt-3";
                 successAlert.textContent = "Message sent successfully!";
@@ -658,24 +658,29 @@
                 // Clear form
                 this.reset();
 
-                // Remove success message and redirect after 2 seconds
+                // Remove success message after 30 seconds and refresh page
                 setTimeout(() => {
                   successAlert.remove();
                   window.location.href = window.location.href;
-                }, 2000);
+                }, 30000);
               } else {
+                // This happens when Formspree limit is reached or other API error
                 throw new Error("Form submission failed");
               }
             })
             .catch((error) => {
+              // custom error message
               const errorAlert = document.createElement("div");
               errorAlert.className = "alert alert-danger mt-3";
+
+              // error message shown for 1 hour
               errorAlert.textContent =
-                "There was an error sending your message. Please try again.";
+                "Sorry, this website is busy right now. Please email me directly at: kavindakiridena@gmail.com";
+
               this.insertAdjacentElement("afterend", errorAlert);
 
-              // Remove error message after 3 seconds
-              setTimeout(() => errorAlert.remove(), 3000);
+              // Remove error message after 1 hour (3600000 ms)
+              setTimeout(() => errorAlert.remove(), 3600000);
             });
         });
     </script>
